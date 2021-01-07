@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.google.gson.internal.GsonBuildConfig;
 
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         textViewResult = findViewById(R.id.text_view_result);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.com/")
+                .baseUrl("http://172.16.0.238:3001/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -45,13 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 List<Post> posts = response.body();
+
                 for(Post post : posts){
                     String content = "";
-                    content += "ID: " + post.getId() + "\n";
-                    content += "UserId: " + post.getUserId() + "\n";
-                    content += "Title: " + post.getTitle() + "\n";
+                    content += "ID: " + post.getID() + "\n";
+                    content += "UserId: " + post.getUsername() + "\n";
+                    content += "Title: " + post.getPassword() + "\n";
                     content += "Body: " + post.getText() + "\n";
                     textViewResult.append(content);
+                    System.out.println("posts"+ content);
                 }
             }
 

@@ -3,37 +3,34 @@ import com.google.gson.annotations.SerializedName;
 
 public class Post {
 
-    private int userId;
+    private String username;
 
-    private int id;
+    private int ID;
 
-    private String title;
+    private String password;
 
-    @SerializedName("body")
-    private String text;
-
-    public int getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public String getTitle() {
-        return title;
+    public String getPassword() {
+        return password;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getText() {
@@ -43,4 +40,9 @@ public class Post {
     public void setText(String text) {
         this.text = text;
     }
+
+    @SerializedName("body")
+    private String text;
+
+
 }
