@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/account"
+        android:alphabeticShortcut="@string/account"
+        android:title="@string/account_label"
+        ></item>
+    <item
+        android:id="@+id/scan"
+        android:alphabeticShortcut="@string/Scan"
+        android:title="@string/Scan_label"
+        ></item>
+    <item
+        android:id="@+id/check"
+        android:alphabeticShortcut="@string/check"
+        android:title="@string/check_label"
+        ></item>
+    <item
+        android:id="@+id/a1"
+        android:alphabeticShortcut="@string/a1"
+        android:title="@string/a1_label"
+        ></item>
+    <item
+        android:id="@+id/a2"
+        android:alphabeticShortcut="@string/a2"
+        android:title="@string/a2_label"
+        ></item>
+
+</menu>
